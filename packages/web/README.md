@@ -7,6 +7,7 @@ This family provides provider-neutral web search and fetch operations plus the m
 | Package | Role | ctx key |
 |---|---|---|
 | [`web/`](web/README.md) | Defines web provider registration, selection, and shared errors | `ctx.web` |
+| [`web-search-9router/`](web-search-9router/README.md) | Provides web search through a 9Router gateway | registers on `ctx.web` |
 | [`web-search-exa/`](web-search-exa/README.md) | Provides web search through Exa | registers on `ctx.web` |
 | [`web-search-perplexity/`](web-search-perplexity/README.md) | Provides web search through Perplexity | registers on `ctx.web` |
 | [`web-search-deepseek/`](web-search-deepseek/README.md) | Provides native DeepSeek web search | registers on `ctx.web` |

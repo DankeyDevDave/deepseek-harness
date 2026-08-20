@@ -3080,6 +3080,41 @@ export interface Config {
 
 来源：[`packages/web/web-fetch-http/src/index.ts:34`](../packages/web/web-fetch-http/src/index.ts)
 
+<a id="deepseek-aidsh-web-search-9router"></a>
+
+## `@deepseek-ai/dsh-web-search-9router`
+
+需要：`web`
+
+```ts config-catalog
+/** Plugin config (all optional — `apply` fills env-var and constant defaults). */
+export interface Config {
+  /** Gateway base; `/v1/search` is appended. Falls back to `$NINEROUTER_URL`. */
+  baseURL?: string
+  /**
+   * Gateway API key. Falls back to `$NINEROUTER_KEY`. Absent is valid: a
+   * gateway with `requireApiKey=false` serves unauthenticated requests.
+   */
+  apiKey?: string
+  /** Upstream provider id sent as `model`. Defaults to `tavily`. */
+  model?: string
+  /** Retrieval mode sent as `search_type`. Defaults to `web`. */
+  searchType?: 'web' | 'news'
+  /** Default result count when a request carries no `maxResults`. Omitted = none. */
+  maxResults?: number
+  /** ISO country code forwarded to providers that support it. */
+  country?: string
+  /** Language code forwarded to providers that support it. */
+  language?: string
+  /** Recency window forwarded to providers that support it. */
+  timeRange?: string
+  /** Domain include/exclude list forwarded to providers that support it. */
+  domainFilter?: string[]
+}
+```
+
+来源：[`packages/web/web-search-9router/src/index.ts:43`](../packages/web/web-search-9router/src/index.ts)
+
 <a id="deepseek-aidsh-web-search-deepseek"></a>
 
 ## `@deepseek-ai/dsh-web-search-deepseek`
